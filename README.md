@@ -1,39 +1,78 @@
-Asteroid Tehlike Analizi ve Kümeleme Projesi
-Proje Hakkında
-Bu proje, NASA tarafından sağlanan asteroid verilerini kullanarak, asteroidlerin tehlikeli olup olmadığını tahmin etmeyi ve farklı özelliklerine göre gruplandırmayı amaçlamaktadır. Veri biliminde hem gözetimli hem de gözetimsiz öğrenme algoritmaları kullanılarak, asteroidlerin özelliklerinin analiz edilmesi ve sınıflandırılması gerçekleştirilmiştir.
+# 🚀 Asteroid Tehlike Analizi ve Kümeleme Projesi
 
-Kullanılan Algoritmalar ve Nedenleri
-Gözetimsiz Öğrenme: KMeans Kümeleme
-Amaç: Veri setindeki asteroidleri benzer özelliklere sahip gruplara ayırmak.
+---
 
-Neden kullanıldı? Verideki asteroidlerin çap, hız, Dünya'ya yaklaşma mesafesi gibi özelliklerine göre doğal kümeler oluşturmak istedik. Bu, verinin yapısını anlamamıza yardımcı olur ve farklı asteroid türlerini ayırt etmemizi sağlar.
+## 📝 Proje Hakkında
+NASA'nın sağladığı **asteroid verileri** kullanılarak, bu gök cisimlerinin tehlike durumlarını anlamak ve gruplamak amacıyla geliştirilen bir makine öğrenmesi projesidir.  
+Projede hem **gözetimsiz** hem de **gözetimli öğrenme** algoritmaları kullanılmıştır.
 
-Nasıl uygulandı? est_diameter_min ve est_diameter_max gibi çap bilgileri kullanılarak 3 küme oluşturuldu. Böylece asteroidler çaplarına göre gruplandı.
+---
 
-Gözetimli Öğrenme: Random Forest Sınıflandırması
-Amaç: Asteroidlerin tehlikeli (hazardous) olup olmadığını tahmin etmek.
+## 🔍 Kullanılan Algoritmalar & Amaçları
 
-Neden kullanıldı? Tehlike durumu etiketli bir veri olduğundan, bu etiketle model eğitmek için gözetimli öğrenme uygundu. Random Forest, güçlü ve yoruma açık bir sınıflandırma algoritmasıdır, çeşitli özelliklerin (çap, hız, mesafe vb.) tehlike üzerindeki etkisini yakalayabilir.
+### 1. Gözetimsiz Öğrenme: **KMeans Kümeleme**
 
-Nasıl uygulandı? Veri ön işleme ile özellikler hazırlandı ve model eğitildi. Modelin doğruluğu ve performansı, sınıflandırma raporları ile değerlendirildi.
+- **Amaç:**  
+Asteroidleri benzer fiziksel özelliklerine göre gruplandırmak.  
+- **Neden KMeans?**  
+Verideki doğal kümeleri ortaya çıkarmak ve asteroidlerin çap gibi özelliklerine göre sınıflandırmak için hızlı ve etkili bir yöntem.  
+- **Nasıl?**  
+`est_diameter_min` ve `est_diameter_max` özellikleri kullanılarak **3 küme** oluşturulmuş ve asteroidler bu kümelere atanmıştır.
 
-İzlenen Yol ve Adımlar
-Veri İncelemesi ve Temizleme: Verideki önemli sütunlar seçildi, eksik veya anlamsız veriler temizlendi.
+---
 
-Kümeleme (KMeans): Asteroidlerin doğal gruplarını görmek için çap değerleri kullanılarak kümeler oluşturuldu.
+### 2. Gözetimli Öğrenme: **Random Forest Sınıflandırması**
 
-Özellik Mühendisliği: Model için anlamlı değişkenler seçildi, gerektiğinde yeni özellikler türetildi.
+- **Amaç:**  
+Asteroidlerin **tehlikeli (hazardous)** olup olmadığını tahmin etmek.  
+- **Neden Random Forest?**  
+  - Çok sayıda özelliğin etkisini analiz etmekte başarılıdır.  
+  - Yüksek doğruluk ve kararlılık sağlar.  
+  - Yorumu görece kolaydır.  
+- **Nasıl?**  
+Veri temizlendikten sonra model eğitilmiş ve performansı doğruluk, kesinlik, geri çağırma gibi metriklerle değerlendirilmiştir.
 
-Sınıflandırma (Random Forest): Tehlike etiketini tahmin etmek için model eğitildi ve test edildi.
+---
 
-Değerlendirme: Model performansı accuracy, precision, recall gibi metriklerle ölçüldü.
+## 🛤️ İzlenen Yol
 
-Görselleştirme: Kümeleme sonuçları grafiklerle, sınıflandırma performansı ise rapor formatında sunuldu.
+1. **Veri Hazırlama:**  
+   - Eksik ve tutarsız veriler temizlendi.  
+   - Kullanılacak özellikler seçildi.  
 
-Sonuç ve Yorumlar
-KMeans ile asteroidler çaplarına göre üç ana kümeye ayrıldı. Bu kümeleme, veri yapısını anlamak ve gruplar arasındaki farkları incelemek için faydalı oldu.
+2. **Kümeleme Uygulaması:**  
+   - Asteroidler çaplarına göre kümelere ayrıldı.  
+   - Sonuçlar grafiklerle görselleştirildi.  
 
-Random Forest sınıflandırması, asteroidlerin tehlikeli olup olmadığını tahmin etmede başarılı sonuçlar verdi.
+3. **Sınıflandırma Modeli:**  
+   - `hazardous` etiketi hedef değişken olarak seçildi.  
+   - Random Forest modeli eğitildi ve test edildi.  
 
-Proje, uzay tehlikelerinin erken tespiti ve sınıflandırılması için veri bilimi yöntemlerinin etkinliğini göstermektedir.
+4. **Sonuçların Analizi:**  
+   - Küme yapıları ve sınıflandırma başarısı yorumlandı.
+
+---
+
+## 📊 Sonuçlar & Yorumlar
+
+- KMeans algoritması asteroidleri çap bazlı 3 anlamlı kümeye ayırdı.  
+- Random Forest modeli, asteroidlerin tehlike durumlarını tahmin etmede yüksek başarı sağladı.  
+- Veri bilimi teknikleri, uzaydaki potansiyel tehlikelerin erken tespitinde güçlü araçlardır.
+
+---
+
+## 💡 Geliştirme Önerileri
+
+- Özellik mühendisliği ile model doğruluğu artırılabilir.  
+- DBSCAN, Hiyerarşik Kümeleme gibi farklı kümeleme yöntemleri denenebilir.  
+- Derin öğrenme tabanlı modeller geliştirilebilir.  
+- Asteroid hareketlerine yönelik zaman serisi analizleri yapılabilir.
+
+---
+
+> **Not:** Bu proje, veri bilimi teknikleriyle uzaydaki tehlikelerin tespiti konusunda somut adımlar atmayı amaçlamaktadır.
+
+---
+
+
 
