@@ -59,20 +59,15 @@ Veri temizlendikten sonra model eğitilmiş ve performansı doğruluk, kesinlik,
 - Random Forest modeli, asteroidlerin tehlike durumlarını tahmin etmede yüksek başarı sağladı.  
 - Veri bilimi teknikleri, uzaydaki potansiyel tehlikelerin erken tespitinde güçlü araçlardır.
 
----
-
-## 💡 Geliştirme Önerileri
-
-- Özellik mühendisliği ile model doğruluğu artırılabilir.  
-- DBSCAN, Hiyerarşik Kümeleme gibi farklı kümeleme yöntemleri denenebilir.  
-- Derin öğrenme tabanlı modeller geliştirilebilir.  
-- Asteroid hareketlerine yönelik zaman serisi analizleri yapılabilir.
 
 ---
 
 > **Not:** Bu proje, veri bilimi teknikleriyle uzaydaki tehlikelerin tespiti konusunda somut adımlar atmayı amaçlamaktadır.
 
 ---
+kaggle linkleri:
+https://www.kaggle.com/code/hanmbatrk/akbankglobalaihubsupervised
+https://www.kaggle.com/code/hanmbatrk/akbankglobalaihubunsupervised
 
 
 
