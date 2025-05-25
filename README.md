@@ -1,6 +1,6 @@
 # 🚀 Asteroid Tehlike Analizi ve Kümeleme Projesi
 
-
+<img src="ekrangoruntusu" şeklinde olacak
 ---
 
 ## 📝 Proje Hakkında
