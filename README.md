@@ -1,6 +1,6 @@
 # 🚀 Asteroid Tehlike Analizi ve Kümeleme Projesi
 
-<img src="Ekran görüntüsü 2025-05-25 2334" şeklinde olacak
+<img src="Ekran görüntüsü 2025-05-25 2334" 
 ---
 
 ## 📝 Proje Hakkında
