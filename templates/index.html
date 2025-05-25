@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NEO Tehlike Tahmin</title>
+    <style>
+      /* CSS burada */
+      body {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      }
+
+      form {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        width: 100%;
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        margin-top: 20px;
+        font-size: 0.95rem;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 12px 15px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        color: #333;
+      }
+
+      input[type="text"]:focus {
+        background-color: #fff;
+        box-shadow: 0 0 8px 2px #9f7aea;
+      }
+
+      button[type="submit"] {
+        margin-top: 30px;
+        width: 100%;
+        padding: 14px;
+        background: #9f7aea;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        box-shadow: 0 6px 12px rgba(159, 122, 234, 0.6);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #7b5dcf;
+        transform: translateY(-2px);
+      }
+
+      h2 {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Asteroid Tehlike Tahmini</h1>
+    <form method="POST">
+      <label>Minimum Çap (km):</label>
+      <input type="text" name="est_diameter_min" required /><br />
+
+      <label>Maksimum Çap (km):</label>
+      <input type="text" name="est_diameter_max" required /><br />
+
+      <label>Göreli Hız (km/s):</label>
+      <input type="text" name="relative_velocity" required /><br />
+
+      <label>Yakın Geçiş Mesafesi (km):</label>
+      <input type="text" name="miss_distance" required /><br />
+
+      <label>Mutlak Büyüklük:</label>
+      <input type="text" name="absolute_magnitude" required /><br />
+
+      <button type="submit">Tahmin Et</button>
+    </form>
+    {% if prediction %}
+    <h2>Sonuç: {{ prediction }}</h2>
+    {% endif %}
+  </body>
+</html>
