@@ -66,6 +66,7 @@ Veri temizlendikten sonra model eğitilmiş ve performansı doğruluk, kesinlik,
 
 ---
 kaggle linkleri:
+
 https://www.kaggle.com/code/hanmbatrk/akbankglobalaihubsupervised
 https://www.kaggle.com/code/hanmbatrk/akbankglobalaihubunsupervised
 
